@@ -97,6 +97,11 @@ double computeOkapiWeight(int docID,
 		     Index *ind)
 {
   /*!!!!! Implement Okapi weighting scheme !!!!!*/
+  double first_term = docTermFreq / (docTermFreq + 0.5 + 1.5 * (ind->docLength(docID) / ind->docLengthAvg()));
+  double second_term = log((ind->docCount() - ind->docCount (termID) + 0.5) / (ind->docCount (termID) + 0.5));
+  double third_term = (8 + qryTermWeight) / (7 + qryTermWeight);
+  return first_term * second_term * third_term;
+
 }
 
 
