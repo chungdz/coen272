@@ -29,6 +29,7 @@ Please refor to the namespace LocalParameter for setting the parameters within t
 #include "ScoreAccumulator.hpp"
 #include "ResultFile.hpp"
 #include "TextQueryRep.hpp"
+#include <math.h>
 
 using namespace lemur::api;
 
@@ -73,6 +74,7 @@ double computeRawTFIDFWeight(int docID,
 		     Index *ind)
 {
   /*!!!!! Implement raw TF and IDF weighting scheme !!!!!*/
+  return docTermFreq * qryTermWeight * log(ind->docCount() / ind->docCount (termID));
 }
 
 
