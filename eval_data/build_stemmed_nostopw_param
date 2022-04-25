@@ -4,6 +4,7 @@
    <position>1</position>
    <docFormat>web</docFormat>
    <memory>25000000</memory>
-   <stemmer>porter</stemmer>
-   <stopwords>stopwordlist</stopwords>
+   <stemmer>arabic</stemmer>
+   <!-- <stemmer>porter</stemmer> -->
+   <!-- <stopwords>stopwordlist</stopwords> -->
 </parameters>
